@@ -1,0 +1,52 @@
+<p style="margin-bottom: 3%; margin-top: 1%"><b>Example: The Traveling Salesperson Problem</b></p>
+<div class="container">
+
+<div class="col" style="display: flex; align-items: flex-start;">
+    <canvas id="tspCanvas" width="600" height="600">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <div style="display: inline-flex; flex-wrap: wrap;">
+        <button onclick="optimize()"class="controls-arrow btn"><i class="material-icons">play_arrow</i></button>
+        <button onclick="initTSP()" class="controls-arrow btn"><i class="material-icons">replay</i></button>
+    </div>
+</div>
+
+<div class="col" style="font-size: 75%">
+
+Neuron $\mathbf{u}_{kj}$ is active<br>
+if place $k$ is visited at time $j$
+<div id="smatrix">
+</div>
+
+</div>
+
+</div>
+---
+
+<p style="margin-bottom: 3%; margin-top: 1%">
+    <b>Implementation on Analog Hardware</b>
+    <br>(Cai F et al., 2020)
+</p>
+
+<div class="container">
+<div class="col">
+<img src="img/strachan.png" style="width: 110%"/><br>
+
+</div>
+<div class="col">
+<div style="font-size: 75%">
+Solutions per Second per Watt:<br>Max-Cut with 60 Nodes
+<p class="fragment">Conventional algorithm on CPU: 250</p>
+<p class="fragment">Conventional algorithm on GPU: >400</p>
+<p class="highlight fragment">Hopfield Network: \(1.38 \times 10^7\)</p>
+</div>
+</div>
+
+</div>
+---
+
+<p style="margin-bottom: 3%; margin-top: 1%">
+    <b>Implementation with Spiking Neurons</b>
+    <br>(Jonke Z et al., 2016)
+</p>
+<img src="img/maass.png" style="height: 400px !important"/>

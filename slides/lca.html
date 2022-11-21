@@ -1,0 +1,37 @@
+<p style="margin-bottom: 2%; margin-top: 2%"><b>Sparse Coding in V1</b></p>
+<div class="container">
+<div class="col">
+<img src="img/v1.png" style="margin-bottom: -2%"/>
+<div style="font-size: 65%;">example dictionary $\mathbf{\Phi}$</div>
+</div>
+
+<div class="col" style="font-size: 55%">
+<p>
+Problem: reconstruct visual input $\mathbf{x}$<br>
+from overcomplete dictionary $\mathbf{\Phi}$<br>
+with sparse activation of neurons $\mathbf{u}$
+</p>
+$
+    \text{min}\|\mathbf{u}\|_1
+$, such that<br>
+$
+    \|\mathbf{x} - \mathbf{\Phi}\mathbf{u}\|_2 = 0
+$
+<br><br>
+
+<div class="fragment fade-in">
+This is equivalent to LASSO:<br>
+$
+    \text{min} \{ \|\mathbf{x} - \mathbf{\Phi}\mathbf{u}\|_2^2 + \lambda \|\mathbf{u}\|_1 \}
+$
+</div>
+<br>
+
+<div class="fragment fade-in highlight">
+... and can be solved with the dynamics<br>
+$
+    \dot{u_i}(t) = b_i - u_i(t) - \sum_{j\neq i}w_{ij}T(u_j(t))
+$<br>
+with driving term $b_i$ and thresholding function $T$
+</div>
+</div>

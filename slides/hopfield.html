@@ -1,0 +1,50 @@
+<p style="margin-bottom: 2%; margin-top: 3%"><b>Hopfield Network: Associative Memory</b></p>
+
+<div class="container">
+
+<div class="col" style="font-size: 50%">
+Fully connected network of on/off neurons
+$
+    \mathbf{u} \in \{-1, 1\}^d
+$<br>
+with weights
+$
+    w_{kj} = w_{jk} \in \mathbb{R}
+$<br>
+and update rule
+$
+    u_j \leftarrow \text{sgn}(\sum_k w_{jk} u_k)
+$<br>
+<img src="img/hopfield.svg" style="height: 15%"/><br>
+Stored patterns
+$
+    \mathbf{x}_i \in \{-1, 1\}^d
+$<br>
+<img src="img/patterns.svg" style="height: 10%"/><br>
+<div class="highlight bigfont">
+Energy function<br>
+$
+    E(\mathbf{u}) = {-\sum_i (\mathbf{x}_i^\top \mathbf{u})^2}
+$
+<br>
+</div>
+
+</div>
+
+<div class="col" style="display: flex; align-items: flex-start;">
+    <canvas id="mnistCanvas" width="28" height="28" class="pixelated" style="border:2px solid #a51e37;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <div style="display: inline-flex; flex-wrap: wrap;">
+        <button onclick="recall()" class="controls-arrow btn"><i class="material-icons">play_arrow</i></button>
+        <button onclick="reset()"class="controls-arrow btn"><i class="material-icons">replay</i></button>
+    </div>
+</div>
+
+</div>
+---
+
+$
+    E(\mathbf{u}) = {-\sum_i (\mathbf{x}_i^\top \mathbf{u})^2}
+$
+<img src = "img/energy.svg"/>

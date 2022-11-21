@@ -1,0 +1,31 @@
+<p style="margin-bottom: 2%; margin-top: -5%"><b>Noise is a Feature!</b></p>
+<img src = "img/stochasticity.svg"/><br>
+flip probability<br>
+$
+    p(u_j \rightarrow u_j^\prime) = \frac{1}{1 + exp(\beta \Delta E_j)}
+$
+---
+
+<p style="margin-bottom: 2%; margin-top: -5%"><b>Thresholds $\theta_j$ as Linear Terms</b></p>
+<div style="flex: 1;">
+<img src="img/thresholds.svg" style="height: 1%"/><br>
+<span style="font-size: 75%">
+$
+    E(\mathbf{u}) = {-\frac{1}{2}\sum_i (\mathbf{x}_i^\top \mathbf{u})^2}
+$<span class="highlight">$ + \sum_j \theta_j u_j$</span>
+</span>
+
+<div class="fragment fade-in" style="margin-top: 2%">
+    $\Rightarrow$ <span style="color: #a51e37">Q</span>uadratic <span style="color: #a51e37">U</span>nconstrained <span style="color: #a51e37">B</span>inary  <span style="color: #a51e37">O</span>ptimization<br>
+    $
+        E(\mathbf{u}) = \mathbf{u}^\top \mathbf{Q} \mathbf{u}
+    $
+</div>
+</div>
+---
+
+<p style="margin-bottom: 2%; margin-top: -5%"><b>Encoding Constraints</b></p>
+<img src = "img/summation.svg"/><br>
+Let $E = aE_1 + bE_2$. Then<br>
+$\mathbf{W} = a\mathbf{W}_1 + b\mathbf{W}_2$ and<br>
+$\boldsymbol{\theta} = a\boldsymbol{\theta}_1 + b\boldsymbol{\theta}_2$
