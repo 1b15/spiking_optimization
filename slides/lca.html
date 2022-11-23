@@ -9,20 +9,20 @@
 <p>
 Problem: reconstruct visual input $\mathbf{x}$<br>
 from overcomplete dictionary $\mathbf{\Phi}$<br>
-with sparse activation of neurons $\mathbf{u}$
+with sparse activation of neurons $\mathbf{a}$
 </p>
 $
-    \text{min}\|\mathbf{u}\|_1
+    \text{min}\|\mathbf{a}\|_1
 $, such that<br>
 $
-    \|\mathbf{x} - \mathbf{\Phi}\mathbf{u}\|_2 = 0
+    \|\mathbf{x} - \mathbf{\Phi}\mathbf{a}\|_2 = 0
 $
 <br><br>
 
 <div class="fragment fade-in">
 This is equivalent to LASSO:<br>
 $
-    \text{min} \{ \|\mathbf{x} - \mathbf{\Phi}\mathbf{u}\|_2^2 + \lambda \|\mathbf{u}\|_1 \}
+    \text{min} \{ \|\mathbf{x} - \mathbf{\Phi}\mathbf{a}\|_2^2 + \lambda \|\mathbf{a}\|_1 \}
 $
 </div>
 <br>
@@ -32,6 +32,7 @@ $
 $
     \dot{u_i}(t) = b_i - u_i(t) - \sum_{j\neq i}w_{ij}T(u_j(t))
 $<br>
-with driving term $b_i$ and thresholding function $T$
+with driving term $b_i = \langle \mathbf{\Phi}_i, \mathbf{x}(t) \rangle$,<br>
+thresholding function $T$, and $a_i = T(u_i)$
 </div>
 </div>
